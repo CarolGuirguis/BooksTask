@@ -1,0 +1,17 @@
+.box{
+    background-color: whitesmoke;
+    width: 150px;
+    height: 100px;
+  }
+.options{
+    font-size: small;
+    text-align: left;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+.title{
+    color: gray;
+    font-size: small;
+    text-align: left;
+    margin-left: 1rem;
+}

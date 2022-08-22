@@ -1,0 +1,67 @@
+.headertext{
+    font-size: large;
+    font-weight: bold;
+    text-align: left;
+  }
+  .button {
+    background-color: #04AA6D; 
+    border: none;
+    color: white;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+  }
+.button5 {border-radius: 50%;}
+.placebutton{text-align: right;}
+.titlearea{
+  text-align: center;
+  background-color: #04AA6D;
+}
+.title{
+  font-size: large;
+  font-weight: bold;
+  color: white;
+}
+.box{
+  width: 20rem;
+  height: 20rem;
+  margin-bottom: 3rem;
+}
+.booktitle{
+  font-weight: bolder;
+}
+.bookauthor{
+  color: grey;
+}
+.bookimage{
+  width: 15rem;
+  height: 15rem;
+  margin-bottom: 1rem;
+}
+.cursor{
+  cursor: pointer;
+}
+.imagebutton{
+  position:relative;
+}
+.btnimage{
+  position: absolute !important;
+  
+  
+  color: white !important;
+  width: 2rem !important;
+  height: 2rem !important;
+  cursor: pointer !important;
+  top: 90% !important;
+  left: 82% !important;
+ 
+  
+}
+.shape{
+  border-radius: 50% !important;
+  background-color: #04AA6D !important; 
+}
+.searchbar{
+  width: 65rem;
+  height: 3rem;
+}
