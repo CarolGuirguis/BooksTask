@@ -1,0 +1,20 @@
+.bookimage{
+    margin-top: 2rem;
+    height: 20rem;
+}
+
+.datatitle{
+    margin-top: 1rem;
+    font-weight: 700;
+}
+.lastmodified{
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+.datadescription{
+    margin-top: 0.5rem;
+}
+.state{
+    margin-top: 1rem;
+    font-size: larger;
+}

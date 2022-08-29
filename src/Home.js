@@ -9,6 +9,7 @@ import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
 import {DebounceInput} from 'react-debounce-input';
+import {BrowserRouter as Router,Routes,Switch,Route,Link} from "react-router-dom";
 
 class Home extends React.Component {
   constructor(){
@@ -189,7 +190,7 @@ handleKeyDown(e) {
    }
    remove(e){
     var link="https://openlibrary.org"+e.target.id+".json"
-   
+    console.log(link)
     fetch(link)
         .then((res)=>res.json())
         .then((res)=>{
@@ -249,9 +250,11 @@ handleKeyDown(e) {
                     <Col key={book.key} xs={12} md={4} lg={3} >
                     <div className="box">
                       <div className="imagebutton">
+                      <Link to={`/bookDetails${book.key}/currentlyreading`}    >
                       {typeof book.covers === "undefined"?<img className="bookimage" src="bookimage.jpg"  />: <img className="bookimage" src=
-                      {`https://covers.openlibrary.org/b/id/${book.covers[1]}-M.jpg`}   />}
-                      
+                      {`https://covers.openlibrary.org/b/id/${book.covers[1]}-M.jpg`}
+                       />}
+                      </Link>
                       <Dropdown className='btnimage'>
       <Dropdown.Toggle variant="success" id="dropdown-basic" className='shape'>
        {BsCaretDownFill}
@@ -286,9 +289,10 @@ handleKeyDown(e) {
                     <Col key={book.key} xs={12} md={4} lg={3} >
                     <div className="box">
                       <div className="imagebutton">
+                      <Link to={`/bookDetails${book.key}/wanttoread`}>
                       {typeof book.covers === "undefined"?<img className="bookimage" src="bookimage.jpg"   />: <img className="bookimage" src=
                       {`https://covers.openlibrary.org/b/id/${book.covers[1]}-M.jpg`}   />}
-                      
+                      </Link>
                       <Dropdown className='btnimage'>
       <Dropdown.Toggle variant="success" id="dropdown-basic" className='shape'>
        {BsCaretDownFill}
@@ -323,9 +327,11 @@ handleKeyDown(e) {
                     <Col key={book.key} xs={12} md={4} lg={3} >
                     <div className="box">
                       <div className="imagebutton">
+                      <Link to={`/bookDetails${book.key}/read`} state="read">
                       {typeof book.covers === "undefined"?<img className="bookimage"  src="bookimage.jpg"  />: <img className="bookimage" src=
                       {`https://covers.openlibrary.org/b/id/${book.covers[1]}-M.jpg`}   />}
-                      
+                     
+                      </Link>
        <Dropdown className='btnimage'>
       <Dropdown.Toggle variant="success" id="dropdown-basic" className='shape'>
        {BsCaretDownFill}
